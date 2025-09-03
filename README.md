@@ -1,33 +1,50 @@
-# FruNext
+# FruNext 🍇
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+**FruNext** es un videojuego desarrollado en **Java** con el framework [libGDX](https://libgdx.com/).  
+El jugador controla a un personaje que debe superar niveles, recoger ítems y evitar enemigos para alcanzar el final.
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+---
 
-## Platforms
+## Cómo jugar
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+- **Objetivo:** completa cada nivel alcanzando la fruta final.
+- **Controles:**
+    - ← / →  → mover
+    - Barra espaciadora → saltar
+    - ESC → abrir menú de pausa (reanudar, sonido ON/OFF, volver al menú principal, salir)
 
-## Gradle
+En pantalla verás tu **nivel actual, vidas y monedas**.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+El juego dispone de enemigos con comportamientos básicos, plataformas móviles y sonidos/animaciones en los personajes.
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+---
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+## Niveles con Tiled
+
+
+- `level1.tmx`
+- `level2.tmx`
+ 
+
+Para añadir nuevos niveles, simplemente crea `level3.tmx`, `level4.tmx`, etc.  
+El juego los detectará automáticamente y avanzará al siguiente si existe.
+
+---
+
+##  Requisitos
+
+- Java 11+ (recomendado 17)
+- Gradle Wrapper incluido (`./gradlew` / `gradlew.bat`)
+
+---
+
+## Ejecutar en escritorio
+
+Desde la raíz del proyecto:
+
+```bash
+# En Linux / macOS
+./gradlew lwjgl3:run
+
+# En Windows
+gradlew lwjgl3:run
