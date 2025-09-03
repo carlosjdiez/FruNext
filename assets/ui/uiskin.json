@@ -1,0 +1,119 @@
+{
+  com.badlogic.gdx.graphics.g2d.BitmapFont: {
+    default-font: { file: default.fnt }
+  },
+
+  com.badlogic.gdx.graphics.Color: {
+    text:      { r: 0.96, g: 0.96, b: 0.96, a: 1 },
+    muted:     { r: 0.75, g: 0.78, b: 0.82, a: 1 },
+    panel:     { r: 0.10, g: 0.12, b: 0.15, a: 0.95 },
+    btn:       { r: 0.16, g: 0.18, b: 0.22, a: 1 },
+    btnOver:   { r: 0.22, g: 0.24, b: 0.28, a: 1 },
+    btnDown:   { r: 0.10, g: 0.12, b: 0.16, a: 1 },
+    btnDisabled:{ r: 0.12, g: 0.13, b: 0.16, a: 1 },
+    select:    { r: 0.35, g: 0.50, b: 0.95, a: 0.35 },
+    accent:    { r: 0.99, g: 0.84, b: 0.36, a: 1 },
+    cursorCol: { r: 1.00, g: 1.00, b: 1.00, a: 1 },
+    white:     { r: 1, g: 1, b: 1, a: 1 },
+    black:     { r: 0, g: 0, b: 0, a: 1 },
+    red:       { r: 1, g: 0, b: 0, a: 1 },
+    green:     { r: 0, g: 1, b: 0, a: 1 }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+    // Oscurecer fondo de diálogos
+    dialogDim:   { name: white, color: { r: 0, g: 0, b: 0, a: 0.45 } },
+
+    // Planos retro (desde tu atlas)
+    panel-flat:     { name: default-rect,       color: panel     },
+    button-up:      { name: default-rect,       color: btn       },
+    button-over:    { name: default-rect,       color: btnOver   },
+    button-down:    { name: default-rect-down,  color: btnDown   },
+    button-disabled:{ name: default-rect,       color: btnDisabled },
+    highlight:      { name: white,              color: select    },
+    field-bg:       { name: textfield,          color: { r: 0.18, g: 0.20, b: 0.25, a: 1 } }
+  },
+
+  // ===== ESTILOS =====
+
+  com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+    default: { font: default-font, fontColor: text },
+    title:   { font: default-font, fontColor: text },
+    muted:   { font: default-font, fontColor: muted }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+    default: { up: button-up, down: button-down },
+    toggle:  { up: button-up, down: button-down, checked: button-down }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+    default: {
+      up: button-up, over: button-over, down: button-down, disabled: button-disabled,
+      font: default-font,
+      fontColor: text, overFontColor: text, downFontColor: text, disabledFontColor: muted,
+      pressedOffsetY: -1
+    },
+    toggle: {
+      up: button-up, over: button-over, down: button-down, checked: button-down, disabled: button-disabled,
+      font: default-font,
+      fontColor: text, downFontColor: text, disabledFontColor: muted
+    }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+    default: { titleFont: default-font, background: panel-flat, titleFontColor: text },
+    dialog:  { titleFont: default-font, background: panel-flat, titleFontColor: text, stageBackground: dialogDim }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+    default: {
+      background: panel-flat,
+      vScroll: default-scroll, vScrollKnob: default-slider,
+      hScroll: default-scroll, hScrollKnob: default-slider
+    }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+    default-horizontal: { background: default-slider, knob: default-slider-knob }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+    default: {
+      font: default-font, fontColor: text,
+      background: field-bg,
+      cursor: cursor,
+      selection: highlight
+    }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+    default: { checkboxOn: check-on, checkboxOff: check-off, font: default-font, fontColor: text }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+    default: { font: default-font, fontColorUnselected: text, fontColorSelected: text, selection: highlight }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+    default: {
+      font: default-font, fontColor: text,
+      background: button-up,
+      scrollStyle: default,
+      listStyle: { font: default-font, selection: highlight }
+    }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+    default-vertical:   { handle: default-splitpane-vertical },
+    default-horizontal: { handle: default-splitpane }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+    default: { background: panel-flat, knob: default-round-large }
+  },
+
+  com.badlogic.gdx.scenes.scene2d.ui.Tree$TreeStyle: {
+    default: { minus: tree-minus, plus: tree-plus, selection: highlight }
+  }
+}

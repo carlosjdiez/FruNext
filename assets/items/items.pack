@@ -1,0 +1,11 @@
+items.png
+size:64,64
+repeat:none
+coin
+bounds:36,30,16,16
+fruit
+bounds:44,12,16,16
+life
+bounds:2,14,32,32
+platform
+bounds:2,2,40,10
